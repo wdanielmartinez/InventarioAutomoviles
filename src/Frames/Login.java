@@ -6,15 +6,28 @@
 
 package Frames;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author W Daniel
  */
 public class Login extends javax.swing.JFrame {
 
-    /** Creates new form Login */
+    private void cerrar(){
+        String botones[] = {"Cerrar","Cancelar"};
+        int eleccion=JOptionPane.showOptionDialog(this, "¿Desea cerrar la aplicación?", "confirmación de cierre", 0, 0, null, botones, this);
+        if(eleccion==JOptionPane.YES_OPTION){
+            System.exit(0);
+        }else if(eleccion==JOptionPane.NO_OPTION){
+            
+        }
+    }
+    
     public Login() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
     }
 
     /** This method is called from within the constructor to
@@ -26,21 +39,152 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblAcceso = new javax.swing.JLabel();
+        lblUsuario = new javax.swing.JLabel();
+        lblContraseña = new javax.swing.JLabel();
+        btnEntrar = new javax.swing.JButton();
+        txtUsuario = new javax.swing.JTextField();
+        Password = new javax.swing.JPasswordField();
+        jLabel3 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(34, 128, 165));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
+
+        lblAcceso.setFont(new java.awt.Font("Yu Gothic UI Semibold", 3, 18)); // NOI18N
+        lblAcceso.setForeground(new java.awt.Color(255, 255, 255));
+        lblAcceso.setText("ACCESO AL CONSECIONARIO");
+
+        lblUsuario.setFont(new java.awt.Font("Yu Gothic Medium", 3, 14)); // NOI18N
+        lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsuario.setText("Usuario:");
+
+        lblContraseña.setFont(new java.awt.Font("Yu Gothic Medium", 3, 14)); // NOI18N
+        lblContraseña.setForeground(new java.awt.Color(255, 255, 255));
+        lblContraseña.setText("Contraseña:");
+
+        btnEntrar.setBackground(new java.awt.Color(204, 204, 204));
+        btnEntrar.setFont(new java.awt.Font("Yu Gothic Medium", 3, 11)); // NOI18N
+        btnEntrar.setText("Entrar");
+        btnEntrar.setDoubleBuffered(true);
+        btnEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEntrarMouseClicked(evt);
+            }
+        });
+        btnEntrar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnEntrarKeyPressed(evt);
+            }
+        });
+
+        txtUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtUsuarioKeyPressed(evt);
+            }
+        });
+
+        Password.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                PasswordKeyPressed(evt);
+            }
+        });
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/paralogin.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(lblAcceso, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(lblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(lblContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(lblAcceso, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblUsuario)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblContraseña)
+                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(67, 67, 67)
+                .addComponent(btnEntrar))
+            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtUsuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsuarioKeyPressed
+        if(evt.getKeyCode()==evt.VK_ENTER){
+            Password.requestFocus();
+        }
+
+    }//GEN-LAST:event_txtUsuarioKeyPressed
+
+    private void PasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PasswordKeyPressed
+        if(evt.getKeyCode()==evt.VK_ENTER){
+            btnEntrar.requestFocus();
+        }
+
+
+    }//GEN-LAST:event_PasswordKeyPressed
+
+    private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntrarMouseClicked
+        String Usuario="admin";
+        String Contraseña="@dm1n";
+        String pass= new String(Password.getPassword());
+        
+        if(txtUsuario.getText().equalsIgnoreCase(Usuario) && pass.equals(Contraseña)){
+            
+        } else{
+            JOptionPane.showMessageDialog(this, "Usuario o Contraseña incorrecta, intente de nuevo.");
+            Password.setText("");
+        }
+    }//GEN-LAST:event_btnEntrarMouseClicked
+
+    private void btnEntrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEntrarKeyPressed
+        if(evt.getKeyCode()== evt.VK_ENTER){
+            String Usuario="admin";
+            String Contraseña="@dm1n";
+            String pass= new String(Password.getPassword());
+        
+            if(txtUsuario.getText().equalsIgnoreCase(Usuario) && pass.equals(Contraseña)){
+            
+            } else{
+                JOptionPane.showMessageDialog(this, "Usuario o Contraseña incorrecta, intente de nuevo.");
+                Password.setText("");
+            }
+        }
+    }//GEN-LAST:event_btnEntrarKeyPressed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        cerrar();
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
@@ -78,6 +222,13 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField Password;
+    private javax.swing.JButton btnEntrar;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblAcceso;
+    private javax.swing.JLabel lblContraseña;
+    private javax.swing.JLabel lblUsuario;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 
 }
