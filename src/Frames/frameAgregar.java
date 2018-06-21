@@ -12,6 +12,7 @@ public class frameAgregar extends javax.swing.JFrame {
     public frameAgregar() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
     }
     
 
@@ -36,7 +37,7 @@ public class frameAgregar extends javax.swing.JFrame {
         lblColor = new javax.swing.JLabel();
         txtColor = new javax.swing.JTextField();
         lblColor2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtColor2 = new javax.swing.JTextField();
         lblMotor = new javax.swing.JLabel();
         txtMotor = new javax.swing.JTextField();
         lblVelMax = new javax.swing.JLabel();
@@ -48,13 +49,13 @@ public class frameAgregar extends javax.swing.JFrame {
         lblNumCilindros = new javax.swing.JLabel();
         txtCilindros = new javax.swing.JTextField();
         lblCapacidad = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtDeposito = new javax.swing.JTextField();
         lblCombustible = new javax.swing.JLabel();
         txtCombustible = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtAceiteMotor = new javax.swing.JTextField();
         lblPrecio = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtPrecio = new javax.swing.JTextField();
         btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         btnReiniciar = new javax.swing.JButton();
@@ -71,29 +72,95 @@ public class frameAgregar extends javax.swing.JFrame {
 
         lblAño.setText("Año:");
 
+        txtAnio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAnioKeyTyped(evt);
+            }
+        });
+
         lblTipo.setText("Tipo:");
 
         lblColor.setText("Color base:");
 
+        txtColor.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtColorKeyTyped(evt);
+            }
+        });
+
         lblColor2.setText("Color secundario:");
+
+        txtColor2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtColor2KeyTyped(evt);
+            }
+        });
 
         lblMotor.setText("Motor:");
 
         lblVelMax.setText("Velocidad máxima (km/h):");
 
+        txtVelocidadMaxima.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtVelocidadMaximaKeyTyped(evt);
+            }
+        });
+
         jLabel2.setText("Potencia máxima:");
+
+        txtPotenciaMaxima.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPotenciaMaximaKeyTyped(evt);
+            }
+        });
 
         lblAceleracion.setText("Aceleración:");
 
+        txtAceleracion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAceleracionKeyTyped(evt);
+            }
+        });
+
         lblNumCilindros.setText("Número de cilindros:");
+
+        txtCilindros.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCilindrosKeyTyped(evt);
+            }
+        });
 
         lblCapacidad.setText("Capacidad del depósito (L):");
 
+        txtDeposito.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDepositoKeyTyped(evt);
+            }
+        });
+
         lblCombustible.setText("Combustible:");
+
+        txtCombustible.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCombustibleKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("Capacidad de aceite del motor (L):");
 
+        txtAceiteMotor.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAceiteMotorKeyTyped(evt);
+            }
+        });
+
         lblPrecio.setText("Precio ($):");
+
+        txtPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPrecioKeyTyped(evt);
+            }
+        });
 
         btnAceptar.setText("Aceptar");
 
@@ -105,6 +172,11 @@ public class frameAgregar extends javax.swing.JFrame {
         });
 
         btnReiniciar.setText("Reiniciar");
+        btnReiniciar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnReiniciarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,7 +194,7 @@ public class frameAgregar extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblPrecio)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -143,7 +215,7 @@ public class frameAgregar extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(lblColor2)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField1))
+                                    .addComponent(txtColor2))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(lblModelo)
@@ -176,7 +248,7 @@ public class frameAgregar extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblCapacidad)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtDeposito, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblCombustible)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -214,7 +286,7 @@ public class frameAgregar extends javax.swing.JFrame {
                     .addComponent(lblColor)
                     .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblColor2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtColor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMotor)
@@ -236,7 +308,7 @@ public class frameAgregar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCapacidad)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDeposito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCombustible)
@@ -248,7 +320,7 @@ public class frameAgregar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPrecio)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAceptar)
@@ -265,6 +337,84 @@ public class frameAgregar extends javax.swing.JFrame {
         frameMenu menu = new frameMenu();
         menu.setVisible(true);
     }//GEN-LAST:event_btnCancelarMouseClicked
+
+    private void btnReiniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReiniciarMouseClicked
+        txtModelo.setText("");
+        txtAnio.setText("");
+        txtTipo.setText("");
+        txtColor.setText("");
+        txtColor2.setText("");
+        txtMotor.setText("");
+        txtVelocidadMaxima.setText("");
+        txtPotenciaMaxima.setText("");
+        txtAceleracion.setText("");
+        txtCilindros.setText("");
+        txtDeposito.setText("");
+        txtCombustible.setText("");
+        txtAceiteMotor.setText("");
+        txtPrecio.setText("");
+        
+        
+    }//GEN-LAST:event_btnReiniciarMouseClicked
+
+    private void txtAnioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnioKeyTyped
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+        if(txtAnio.getText().length()>=4){
+            evt.consume();
+        }
+        
+    }//GEN-LAST:event_txtAnioKeyTyped
+
+    private void txtVelocidadMaximaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtVelocidadMaximaKeyTyped
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtVelocidadMaximaKeyTyped
+
+    private void txtPotenciaMaximaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPotenciaMaximaKeyTyped
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtPotenciaMaximaKeyTyped
+
+    private void txtAceleracionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAceleracionKeyTyped
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtAceleracionKeyTyped
+
+    private void txtCilindrosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCilindrosKeyTyped
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtCilindrosKeyTyped
+
+    private void txtDepositoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDepositoKeyTyped
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtDepositoKeyTyped
+
+    private void txtAceiteMotorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAceiteMotorKeyTyped
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtAceiteMotorKeyTyped
+
+    private void txtPrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPrecioKeyTyped
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtPrecioKeyTyped
+
+    private void txtColorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColorKeyTyped
+        char c = evt.getKeyChar();
+        if((c<'a' || c>'z')&&(c<'A' || c>'Z')) evt.consume();
+    }//GEN-LAST:event_txtColorKeyTyped
+
+    private void txtColor2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColor2KeyTyped
+        char c = evt.getKeyChar();
+        if((c<'a' || c>'z')&&(c<'A' || c>'Z')) evt.consume();
+    }//GEN-LAST:event_txtColor2KeyTyped
+
+    private void txtCombustibleKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCombustibleKeyTyped
+        char c = evt.getKeyChar();
+        if((c<'a' || c>'z')&&(c<'A' || c>'Z')) evt.consume();
+    }//GEN-LAST:event_txtCombustibleKeyTyped
 
     /**
      * @param args the command line arguments
@@ -310,9 +460,6 @@ public class frameAgregar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel lblAceleracion;
     private javax.swing.JLabel lblAño;
     private javax.swing.JLabel lblCapacidad;
@@ -331,10 +478,13 @@ public class frameAgregar extends javax.swing.JFrame {
     private javax.swing.JTextField txtAnio;
     private javax.swing.JTextField txtCilindros;
     private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtColor2;
     private javax.swing.JTextField txtCombustible;
+    private javax.swing.JTextField txtDeposito;
     private javax.swing.JTextField txtModelo;
     private javax.swing.JTextField txtMotor;
     private javax.swing.JTextField txtPotenciaMaxima;
+    private javax.swing.JTextField txtPrecio;
     private javax.swing.JTextField txtTipo;
     private javax.swing.JTextField txtVelocidadMaxima;
     // End of variables declaration//GEN-END:variables
