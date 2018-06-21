@@ -228,61 +228,33 @@
     <Component class="javax.swing.JComboBox" name="jComboBox1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="54">
-            <StringItem index="0" value="ALFA ROMERO"/>
-            <StringItem index="1" value="AUDI"/>
-            <StringItem index="2" value="BENTLEY"/>
-            <StringItem index="3" value="BMW"/>
-            <StringItem index="4" value="BUGATTI"/>
-            <StringItem index="5" value="CHEVROLET"/>
-            <StringItem index="6" value="CHRYSLER"/>
-            <StringItem index="7" value="CITROEN"/>
-            <StringItem index="8" value="DACIA"/>
-            <StringItem index="9" value="DAEWOO"/>
-            <StringItem index="10" value="DAIHATSU"/>
-            <StringItem index="11" value="DODGE"/>
-            <StringItem index="12" value="DS"/>
-            <StringItem index="13" value="FERRARI"/>
-            <StringItem index="14" value="FIAT"/>
-            <StringItem index="15" value="FORD"/>
-            <StringItem index="16" value="GREAT WALL"/>
-            <StringItem index="17" value="HONDA"/>
-            <StringItem index="18" value="HUMMER"/>
-            <StringItem index="19" value="HYUNDAY"/>
-            <StringItem index="20" value="INFINITI"/>
-            <StringItem index="21" value="JAGUAR"/>
-            <StringItem index="22" value="JEEP"/>
-            <StringItem index="23" value="KIA"/>
-            <StringItem index="24" value="LAMBORGINI"/>
-            <StringItem index="25" value="LANCIA"/>
-            <StringItem index="26" value="LAND ROVER"/>
-            <StringItem index="27" value="LEXUS"/>
-            <StringItem index="28" value="MASERATI"/>
-            <StringItem index="29" value="MAZDA"/>
-            <StringItem index="30" value="MERCEDES-BENZ"/>
-            <StringItem index="31" value="MG"/>
-            <StringItem index="32" value="MINI"/>
-            <StringItem index="33" value="MITSUBISHI"/>
-            <StringItem index="34" value="MOSKVICH"/>
-            <StringItem index="35" value="NISSAN"/>
-            <StringItem index="36" value="OPEL"/>
-            <StringItem index="37" value="PEUGEOT"/>
-            <StringItem index="38" value="PORSCHE"/>
-            <StringItem index="39" value="RENAULT"/>
-            <StringItem index="40" value="ROVER"/>
-            <StringItem index="41" value="SAAB"/>
-            <StringItem index="42" value="SEAT"/>
-            <StringItem index="43" value="SKODA"/>
-            <StringItem index="44" value="SMART"/>
-            <StringItem index="45" value="SUBARU"/>
-            <StringItem index="46" value="SUZUKI"/>
-            <StringItem index="47" value="TATA"/>
-            <StringItem index="48" value="TESLA"/>
-            <StringItem index="49" value="TOYOTA"/>
-            <StringItem index="50" value="TRABANT"/>
-            <StringItem index="51" value="VAZ"/>
-            <StringItem index="52" value="VOLKSWAGEN"/>
-            <StringItem index="53" value="VOLVO"/>
+          <StringArray count="26">
+            <StringItem index="0" value="AUDI"/>
+            <StringItem index="1" value="BENTLEY"/>
+            <StringItem index="2" value="BMW"/>
+            <StringItem index="3" value="CHEVROLET"/>
+            <StringItem index="4" value="DACIA"/>
+            <StringItem index="5" value="DODGE"/>
+            <StringItem index="6" value="DS"/>
+            <StringItem index="7" value="FERRARI"/>
+            <StringItem index="8" value="FIAT"/>
+            <StringItem index="9" value="FORD"/>
+            <StringItem index="10" value="HONDA"/>
+            <StringItem index="11" value="HYUNDAY"/>
+            <StringItem index="12" value="JAGUAR"/>
+            <StringItem index="13" value="JEEP"/>
+            <StringItem index="14" value="KIA"/>
+            <StringItem index="15" value="MAZDA"/>
+            <StringItem index="16" value="MINI"/>
+            <StringItem index="17" value="MITSUBISHI"/>
+            <StringItem index="18" value="NISSAN"/>
+            <StringItem index="19" value="PEUGEOT"/>
+            <StringItem index="20" value="PORSCHE"/>
+            <StringItem index="21" value="RENAULT"/>
+            <StringItem index="22" value="SUZUKI"/>
+            <StringItem index="23" value="TESLA"/>
+            <StringItem index="24" value="TOYOTA"/>
+            <StringItem index="25" value="VOLVO"/>
           </StringArray>
         </Property>
       </Properties>

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Frames;
 
 /**
@@ -11,9 +6,9 @@ package Frames;
  */
 public class frameAgregar extends javax.swing.JFrame {
 
-    /**
-     * Creates new form frameAgregar
-     */
+    //Conexion con = new Conexion();
+    //Connection conectar = new con.conexion();
+    
     public frameAgregar() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -72,7 +67,7 @@ public class frameAgregar extends javax.swing.JFrame {
 
         lblMarca.setText("Marca:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ALFA ROMERO", "AUDI", "BENTLEY", "BMW", "BUGATTI", "CHEVROLET", "CHRYSLER", "CITROEN", "DACIA", "DAEWOO", "DAIHATSU", "DODGE", "DS", "FERRARI", "FIAT", "FORD", "GREAT WALL", "HONDA", "HUMMER", "HYUNDAY", "INFINITI", "JAGUAR", "JEEP", "KIA", "LAMBORGINI", "LANCIA", "LAND ROVER", "LEXUS", "MASERATI", "MAZDA", "MERCEDES-BENZ", "MG", "MINI", "MITSUBISHI", "MOSKVICH", "NISSAN", "OPEL", "PEUGEOT", "PORSCHE", "RENAULT", "ROVER", "SAAB", "SEAT", "SKODA", "SMART", "SUBARU", "SUZUKI", "TATA", "TESLA", "TOYOTA", "TRABANT", "VAZ", "VOLKSWAGEN", "VOLVO" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AUDI", "BENTLEY", "BMW", "CHEVROLET", "DACIA", "DODGE", "DS", "FERRARI", "FIAT", "FORD", "HONDA", "HYUNDAY", "JAGUAR", "JEEP", "KIA", "MAZDA", "MINI", "MITSUBISHI", "NISSAN", "PEUGEOT", "PORSCHE", "RENAULT", "SUZUKI", "TESLA", "TOYOTA", "VOLVO" }));
 
         lblAño.setText("Año:");
 
