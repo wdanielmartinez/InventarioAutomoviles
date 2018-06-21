@@ -57,7 +57,7 @@ public class Login extends javax.swing.JFrame {
 
         lblAcceso.setFont(new java.awt.Font("Yu Gothic UI Semibold", 3, 18)); // NOI18N
         lblAcceso.setForeground(new java.awt.Color(255, 255, 255));
-        lblAcceso.setText("ACCESO AL CONSECIONARIO");
+        lblAcceso.setText("ACCESO AL CONCESIONARIO");
 
         lblUsuario.setFont(new java.awt.Font("Yu Gothic Medium", 3, 14)); // NOI18N
         lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
