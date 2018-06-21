@@ -160,6 +160,9 @@ public class Login extends javax.swing.JFrame {
         String pass= new String(Password.getPassword());
         
         if(txtUsuario.getText().equalsIgnoreCase(Usuario) && pass.equals(Contraseña)){
+            frameMenu menu = new frameMenu();
+            menu.setVisible(true);
+            this.dispose();
             
         } else{
             JOptionPane.showMessageDialog(this, "Usuario o Contraseña incorrecta, intente de nuevo.");

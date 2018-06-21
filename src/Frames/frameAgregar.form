@@ -36,7 +36,7 @@
                           <Group type="102" attributes="0">
                               <Component id="lblPrecio" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jTextField3" min="-2" pref="84" max="-2" attributes="0"/>
+                              <Component id="txtPrecio" min="-2" pref="84" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
@@ -61,7 +61,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lblColor2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField1" max="32767" attributes="0"/>
+                                  <Component id="txtColor2" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -103,7 +103,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="lblCapacidad" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField2" min="-2" pref="83" max="-2" attributes="0"/>
+                              <Component id="txtDeposito" min="-2" pref="83" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="lblCombustible" min="-2" max="-2" attributes="0"/>
@@ -152,7 +152,7 @@
                   <Component id="lblColor" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtColor" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblColor2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtColor2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -179,7 +179,7 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblCapacidad" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtDeposito" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -194,7 +194,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblPrecio" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPrecio" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -296,6 +296,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtAnio">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAnioKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblTipo">
       <Properties>
@@ -310,13 +313,19 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtColor">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtColorKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblColor2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Color secundario:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="txtColor2">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtColor2KeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblMotor">
       <Properties>
@@ -331,6 +340,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtVelocidadMaxima">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtVelocidadMaximaKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
@@ -338,6 +350,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtPotenciaMaxima">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPotenciaMaximaKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblAceleracion">
       <Properties>
@@ -345,6 +360,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtAceleracion">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAceleracionKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblNumCilindros">
       <Properties>
@@ -352,13 +370,19 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCilindros">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtCilindrosKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCapacidad">
       <Properties>
         <Property name="text" type="java.lang.String" value="Capacidad del dep&#xf3;sito (L):"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="txtDeposito">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtDepositoKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCombustible">
       <Properties>
@@ -366,6 +390,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCombustible">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtCombustibleKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -373,13 +400,19 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtAceiteMotor">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAceiteMotorKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblPrecio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Precio ($):"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="txtPrecio">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPrecioKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnAceptar">
       <Properties>
@@ -398,6 +431,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Reiniciar"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnReiniciarMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
