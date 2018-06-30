@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package Frames;
 
 import javax.swing.JOptionPane;
@@ -160,6 +154,9 @@ public class Login extends javax.swing.JFrame {
         String pass= new String(Password.getPassword());
         
         if(txtUsuario.getText().equalsIgnoreCase(Usuario) && pass.equals(Contraseña)){
+            frameMenu menu = new frameMenu();
+            menu.setVisible(true);
+            this.dispose();
             
         } else{
             JOptionPane.showMessageDialog(this, "Usuario o Contraseña incorrecta, intente de nuevo.");
