@@ -174,7 +174,7 @@ public class Login extends javax.swing.JFrame {
             String pass= new String(Password.getPassword());
         
             if(txtUsuario.getText().equalsIgnoreCase(Usuario) && pass.equals(Contraseña)){
-            
+                
             } else{
                 JOptionPane.showMessageDialog(this, "Usuario o Contraseña incorrecta, intente de nuevo.");
                 Password.setText("");
